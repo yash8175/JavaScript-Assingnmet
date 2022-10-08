@@ -1,0 +1,35 @@
+function outerfunction(){
+    var outervariable=100;
+    function innerfunction(){
+        alert(outervariable);
+    }
+    return innerfunction;
+}
+var innerfunc=outerfunction();
+innerfunc();
+
+
+1)Is the innerfunction() a closure?
+ Yes, the innerfunnction() is a closure.
+ output:100
+
+
+2)What is a difference between a closure and a scope?
+  When we create a function within another function,then the innerfunction is closure. This closure is usually returned
+  so that we can use the outerfunction variable at a later time and scope determines the accessibility of variables.
+ 
+3)What is lexical scope and how is it related to closure?
+ Basically lexical scope is any innerfunction can have access to  its outerscope variables and a closure is a function that
+ captures variables from its lexical scope.
+
+4)Output of following closure?
+  
+for( var i=0; i<3; i++){
+setTimeout(function log(){
+console.log(i);
+},1000);
+}
+
+ouput:3
+
+  
